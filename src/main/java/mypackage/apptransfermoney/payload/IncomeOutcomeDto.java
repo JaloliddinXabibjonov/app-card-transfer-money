@@ -8,9 +8,11 @@ import javax.validation.constraints.NotNull;
 public class IncomeOutcomeDto {
 
     @NotNull(message = "Mablag' yuboruvchi karta raqami bo`sh bo`lmasligi kerak!")
-    private int fromCardId;
+    private String fromCardNumber;
     @NotNull(message = "Mablag' qabul qiluvchi karta raqami bo`sh bo`lmasligi kerak!")
-    private int toCardId;
+    private String toCardNumber;
     @NotNull(message = "Yuborilayotgan mablag' bo`sh bo`lmasligi kerak!")
     private long amount;
+
+    private long commissionAmount;
 }

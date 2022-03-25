@@ -7,26 +7,25 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
-public class Outcome {
-
+public class IncomeAndOutcome {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
-    private int fromCardId;
+    private String fromCardNumber;
 
     @Column(nullable = false)
-    private int toCardId;
+    private String toCardNumber;
 
     @Column(nullable = false)
     private long amount;
 
     private Date date;
 
-    private long comissionAmount;
+    private long commissionAmount;
 }

@@ -11,9 +11,7 @@ import java.util.Date;
 public class AppTransferMoneyApplication {
 
     public static void main(String[] args) throws ParseException {
-
-
-                SpringApplication.run(AppTransferMoneyApplication.class, args);
+        SpringApplication.run(AppTransferMoneyApplication.class, args);
     }
 
 }
