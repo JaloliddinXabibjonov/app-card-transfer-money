@@ -3,30 +3,23 @@ package mypackage.apptransfermoney.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-
-public class Income {
-
+public class Role implements GrantedAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
-    private int fromCardId;
+    private String roleName;
 
-    @Column(nullable = false)
-    private int toCardId;
-
-    @Column(nullable = false)
-    private long amount;
-
-    private Date date;
-
+    @Override
+    public String getAuthority() {
+        return this.roleName;
+    }
 }
